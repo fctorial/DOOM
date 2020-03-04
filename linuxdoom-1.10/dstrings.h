@@ -34,11 +34,13 @@
 #ifdef FRENCH
 #include "d_french.h"
 #else
+
 #include "d_englsh.h"
+
 #endif
 
 // Misc. other strings.
-#define SAVEGAMENAME	"doomsav"
+#define SAVEGAMENAME    "doomsav"
 
 
 //
@@ -55,7 +57,7 @@
 // QuitDOOM messages
 #define NUM_QUITMESSAGES   22
 
-extern char* endmsg[];
+extern char *endmsg[];
 
 
 #endif
