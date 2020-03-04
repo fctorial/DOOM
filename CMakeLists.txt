@@ -147,4 +147,4 @@ add_executable(DOOM
         linuxdoom-1.10/z_zone.h
         )
 
-target_link_libraries(DOOM m PkgConfit::x11 PkgConfig::xext)
+target_link_libraries(DOOM m PkgConfig::x11 PkgConfig::xext)

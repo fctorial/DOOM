@@ -27,6 +27,7 @@ static const char
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <errno.h>
 
 #include <math.h>
 
@@ -162,7 +163,6 @@ myioctl
          int command,
          int *arg) {
     int rc;
-    extern int errno;
 
     rc = ioctl(fd, command, arg);
     if (rc < 0) {
