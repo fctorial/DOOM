@@ -805,6 +805,7 @@ void I_InitGraphics(void) {
 
     XDefineCursor(X_display, X_mainWindow,
                   createnullcursor(X_display, X_mainWindow));
+    XInstallColormap( X_display, X_cmap );
 
     // create the GC
     valuemask = GCGraphicsExposures;
