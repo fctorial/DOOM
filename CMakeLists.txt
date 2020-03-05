@@ -16,6 +16,17 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(xext REQUIRED IMPORTED_TARGET xext)
 pkg_check_modules(x11 REQUIRED IMPORTED_TARGET x11)
 
+add_executable(sndserver
+        sndserv/linux.c
+        sndserv/sounds.c
+        sndserv/sounds.h
+        sndserv/soundsrv.c
+        sndserv/soundsrv.h
+        sndserv/soundst.h
+        sndserv/wadread.c
+        sndserv/wadread.h
+)
+
 add_executable(DOOM
         linuxdoom-1.10/am_map.c
         linuxdoom-1.10/am_map.h
@@ -145,3 +156,6 @@ add_executable(DOOM
 
 target_link_libraries(DOOM m PkgConfig::x11 PkgConfig::xext)
 set_target_properties(DOOM PROPERTIES COMPILE_OPTIONS "-m32" LINK_FLAGS "-m32")
+
+target_link_libraries(sndserver m PkgConfig::x11 PkgConfig::xext)
+set_target_properties(sndserver PROPERTIES COMPILE_OPTIONS "-m32" LINK_FLAGS "-m32")
