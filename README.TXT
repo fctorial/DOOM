@@ -1,3 +1,14 @@
+Fixed to compile and run on modern linux systems
+
+    mkdir cmake-build-debug
+    cd cmake-build-debug
+    cmake ..
+    make
+
+Place whatever wad you want to run in `cmake-build-debug` and
+run `run_scaled <scale>` to play zoomed in DOOM.
+
+=================================
 
 Here it is, at long last.  The DOOM source code is released for your
 non-profit use.  You still need real DOOM data to work with this code.
