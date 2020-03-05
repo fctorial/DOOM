@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 2.8.4)
 project(DOOM)
 
-#set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 90)
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0")
 
-add_definitions(-DNORMALUNIX -DLINUX)
+add_definitions(-DNORMALUNIX -DLINUX -U_FORTIFY_SOURCE)
 
 include_directories(ipx)
 include_directories(linuxdoom-1.10)
@@ -16,9 +15,6 @@ find_package(PkgConfig REQUIRED)
 
 pkg_check_modules(xext REQUIRED IMPORTED_TARGET xext)
 pkg_check_modules(x11 REQUIRED IMPORTED_TARGET x11)
-
-# find_package(X11 REQUIRED)
-#find_package(Xshm REQUIRED)
 
 add_executable(DOOM
         linuxdoom-1.10/am_map.c
@@ -148,3 +144,4 @@ add_executable(DOOM
         )
 
 target_link_libraries(DOOM m PkgConfig::x11 PkgConfig::xext)
+set_target_properties(DOOM PROPERTIES COMPILE_OPTIONS "-m32" LINK_FLAGS "-m32")
