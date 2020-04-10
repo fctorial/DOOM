@@ -5,8 +5,11 @@ Fixed to compile and run on modern linux systems
     cmake ..
     make
 
-Place whatever wad you want to run in `cmake-build-debug` and
-run `run_scaled <scale>` to play zoomed in DOOM.
+Place whatever wad you want to run in `cmake-build-debug`
+Edit `DISPLAY` and `RESOLUTION` vars in `run` script and
+launch the game with this:
+
+`./run -3` to play 3x zoomed in DOOM.
 
 =================================
 
