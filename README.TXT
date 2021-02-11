@@ -9,8 +9,6 @@ Place the wad you want to run in `cmake-build-debug` and launch the game like th
 
 `./run 1024x768`
 
-to play the game with 3x zoom.
-
 Notes:
 
 1. WAD file name must be in lowercase
