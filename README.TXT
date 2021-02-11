@@ -5,11 +5,23 @@ Fixed to compile and run on modern linux systems
     cmake ..
     make
 
-Place whatever wad you want to run in `cmake-build-debug`
-Edit `DISPLAY` and `RESOLUTION` vars in `run` script and
-launch the game with this:
+Place the wad you want to run in `cmake-build-debug` and launch the game like this:
 
-`./run -3` to play 3x zoomed in DOOM.
+`./run 1920x1000`
+
+to play the game with 3x zoom.
+
+Notes:
+
+1. WAD file name must be in lowercase
+
+2. There's a device file path in `sndserv/linux.c` line 75 (`/dev/dsp1`) which might need to be tweaked.
+
+TODO:
+
+1. Music
+2. Mouse
+3. Graphics glitch at 4x resolution
 
 =================================
 
