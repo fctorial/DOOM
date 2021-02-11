@@ -7,7 +7,7 @@ Fixed to compile and run on modern linux systems
 
 Place the wad you want to run in `cmake-build-debug` and launch the game like this:
 
-`./run 1920x1000`
+`./run 1024x768`
 
 to play the game with 3x zoom.
 
